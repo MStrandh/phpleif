@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 gruntjs-default-jsbuild
 =======================
 
@@ -11,3 +12,6 @@ Runs JSHint on all the JavaScript files followed by re-adding all the script tag
 
 ### grunt watch
 This is the (most) useful task for rapid testing/prototyping. Basically it monitors changes to the JavaScript files, once a change is detected it JSHints everything, adds all script tags and reloads the browser(if the LiveReload plug-in is installed).
+=======
+# phpleif
+>>>>>>> 57820c63436b52948fe72a8c7635b7bb08463e4f
