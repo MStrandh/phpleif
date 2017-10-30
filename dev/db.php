@@ -30,7 +30,6 @@
 				$port
 			);
 
-			// Check connection
 			if (!$success) {
 				die("Connection failed: " . $this->link->connect_error);
 			} 

@@ -1,8 +1,36 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
 body {
 	background-color: #FFCCFF;
+
+	margin: 0px;
+	padding: 0px;
+
+	width: 100vh;
+	height: 100vh;
+
+	background: repeating-linear-gradient(
+		45deg,
+		#F2EBBF,
+		#F2EBBF 10px,
+		#F3B562 10px,
+		#F3B562 20px
+	);
+}
+
+header {
+	font-family: 'Gruppo', cursive;
+	font-size:  48px;
+
+	background-color: #5C4B51;
 }
 
 .blogArticle {
 	margin: 5px;
 	border: 1px dotted black;
+
+	background-color: #8CBEB2;
 }
