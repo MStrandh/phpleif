@@ -19,11 +19,36 @@
 
 	<header><h1>Leif</h1></header>
 	
-	<main>	
-		<?php
-			$article = new Article($dbManager);
-			$article->printAll();
-		?>
+	<nav>
+		<ul class="mainNavigation">
+			<li><a href="#">Om Leif</a></li>
+			<li><a href="#">Oljud</a></li>
+			<li><a href="#">Ungdomar</a></li>
+			<li><a href="#">Folk i allmänhet</a></li>
+			<li><a href="#">Hytter med näven</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<div class="container">
+			<div class="mainContainer">
+				<div class="mainContent">
+					<?php
+						$article = new Article($dbManager);
+						$article->printAll();
+					?>
+				</div>
+				
+				<div class="divider">
+				</div>
+
+				<aside class="mainInfo">
+					<div class="mainInfoBox">
+						Info
+					</div>
+				</aside>
+			</div>
+		</div>
 	</main>
 
 	<footer></footer>

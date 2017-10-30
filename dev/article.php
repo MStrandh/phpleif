@@ -21,8 +21,15 @@ class Article {
 
 	function printArticle($title, $content) {
 		$articleOutput = "<article class=\"blogArticle\">";
+		
+		$articleOutput .= "<div class=\"blogArticleHeader\">";
 		$articleOutput .= "<h1>" . $title . "</h1>";
+		$articleOutput .= "</div>";
+
+		$articleOutput .= "<div class=\"blogArticleContent\">";
 		$articleOutput .= "<i>" . $content . "</i>";
+		$articleOutput .= "</div>";
+
 		$articleOutput .= "</article>\n";
 
 		echo $articleOutput;
