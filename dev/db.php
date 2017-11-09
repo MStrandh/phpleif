@@ -30,6 +30,9 @@
 				$port
 			);
 
+			
+			$this->link->set_charset("utf8");
+
 			if (!$success) {
 				die("Connection failed: " . $this->link->connect_error);
 			} 
