@@ -2,5 +2,5 @@
 .DS_Store
 node_modules/
 
-dev/db_conf.php
+dev/**/db_conf.php
 db/adminer/**/*

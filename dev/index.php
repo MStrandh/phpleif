@@ -1,9 +1,9 @@
 <?php
 	include_once "debug.php";
-	include_once "db.php";
+	include_once "./db/DatabaseConnection.php";
 	include_once "article.php";
 
-	$dbManager = new DatabaseConnectionManager();
+	$dbManager = new DatabaseConnection();
 	$dbManager->openConnection();
 ?>
 

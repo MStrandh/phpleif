@@ -8,18 +8,25 @@ class Article {
 	}
 
 	function printAll() {
-		$result = $this->dbManager->runQuery("SELECT title, content FROM blog_posts");
+		$query = "SELECT bp.title, bp.content, u.first_name, u.last_name ";
+		$query .= "FROM blog_posts bp ";
+		$query .= "JOIN users u ";
+		$query .= "ON bp.author = u.id";
 
-		if ($result->num_rows > 0) {
-			while($row = $result->fetch_assoc()) {
-				$this->printArticle($row["title"], $row["content"]);
-			}
-		} else {
-			echo $this->printNoArticles();
+		$this->dbManager->prepare($query);
+		$this->dbManager->execute();
+
+		while($row = $this->dbManager->fetch()) {
+			$postTitle = $row["title"];
+			$postContent = $row["content"];
+			$postAuthor = $row["first_name"] . " " . $row["last_name"];
+			$this->printArticle($postTitle, $postContent, $postAuthor);
 		}
+
+		//echo $this->printNoArticles();
 	}
 
-	function printArticle($title, $content) {
+	function printArticle($title, $content, $author) {
 		$articleOutput = "<article class=\"blogArticle\">";
 		
 		$articleOutput .= "<div class=\"blogArticleHeader\">";
@@ -28,6 +35,10 @@ class Article {
 
 		$articleOutput .= "<div class=\"blogArticleContent\">";
 		$articleOutput .= "<i>" . $content . "</i>";
+		$articleOutput .= "</div>";
+
+		$articleOutput .= "<div class=\"blogAuthor\">";
+		$articleOutput .= "<i>Av: " . $author . "</i>";
 		$articleOutput .= "</div>";
 
 		$articleOutput .= "</article>\n";

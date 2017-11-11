@@ -132,6 +132,12 @@ header {
 	);
 }
 
+.blogAuthor {
+	padding-right: 15px;
+
+	text-align: right;
+}
+
 .blogArticleContent {
 	padding: 15px;
 }
